@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-image: url('../image/home_bg.jpg'); /* Correctly set the background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+.container {
+    background: transparent; /* Add a semi-transparent background to the content */
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 100px;
+    margin: 50px auto;
+    
+    
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Header Section */
+.header-section {
+    background-color: blur; /* Semi-transparent background */
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: center; /* Vertically center the logo and text */
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    border:2px solid black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+}
+
+/* Logo Image */
+.logo-img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Keeps aspect ratio */
+    margin-right: 10px; /* Spacing between the logo and the text */
+}
+
+/* Navigation Links */
+.nav-links {
+
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+}
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 1;
+    align-items:center;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: 1px solid white;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    border: 2px solid white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color:transparent;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    border:2px solid black;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: blur;
+    height: 300px;
+    text-align: center;
+    color: black;
+    padding-top: 100px;
+}
+
+.hero-section h2 {
+    font-size: 40px;
+    color: red;
+}
+
+.hero-section p {
+    font-size: 18px;
+}
+
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+.section {
+    margin: 20px 0;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    
+}
+
+.section h3 {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+/* Card Grid Layout for Displaying Four Cards in One Row */
+.card-grid {
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    border:2px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four cards in one row */
+    gap: 20px;
+    padding: 10px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    border:2px solid black;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    z-index: 0;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three cards per row for medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row for small screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* One card per row for very small screens */
+    }
+}
+
+/* Buy Car Button */
+.buy-car-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buy-car-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Car Brand Grid */
+.car-brand-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five cards in one row */
+    gap: 10px; /* Space between cards */
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    border:2px solid black;
+}
+
+/* Brand Card */
+.brand-card {
+    background-color: transparent; /* Optional: set a background color for visibility */
+    border-radius: 8px;
+    height: 150px; /* Fixed height for smaller cards */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hide overflow to contain images */
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 900);
+    border:2px solid black;
+}
+
+/* Brand Logo */
+.brand-logo {
+    width: 100%; /* Make the logo fill the card width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Prevent the image from exceeding the card height */
+    object-fit: contain; /* Ensures the logo is contained within the image box */
+}
+
+/* Card Hover Effect */
+.brand-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+
+/* Content Inside Brand Card */
+.brand-card-content {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text readability */
+    color: white;
+    padding: 5px; /* Adjust padding as necessary */
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

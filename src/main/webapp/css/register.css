@@ -1,0 +1,89 @@
+/* register.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background:  url('../image/backgroung.jpg') no-repeat center center fixed; /* Image overlay with gradient */
+    background-size: cover; /* Ensures the image covers the entire background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    background-color: blur; /* Semi-transparent background for better readability */
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 500);
+    padding: 50px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.register-container:hover {
+    transform: scale(1.02); /* Slightly scale up the container on hover */
+     box-shadow: 0 15px 25px rgba(200, 200, 200, 900); /* Enhance the shadow effect */
+    border:2px solid white;
+}
+
+.register-container h2 {
+    margin: 0 0 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.register-container form input[type="text"],
+.register-container form input[type="email"],
+.register-container form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.register-container form input[type="text"]:focus,
+.register-container form input[type="email"]:focus,
+.register-container form input[type="password"]:focus {
+    border-color: #4facfe;
+    background: #e6f7ff;
+    outline: none;
+}
+
+.register-container form input[type="submit"] {
+    width: 50%; /* Smaller width for the submit button */
+    padding: 10px; /* Slightly smaller padding */
+    background-color: #4facfe;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+    margin: 15px auto; /* Center the button */
+    display: block; /* Ensures the button is centered */
+}
+
+.register-container form input[type="submit"]:hover {
+    background-color: #00c6fb; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up the button */
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: red;
+}
+
+p a {
+    color: #00f2fe;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
