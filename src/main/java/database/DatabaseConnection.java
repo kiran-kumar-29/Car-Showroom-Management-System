@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    private static final String dbURL = "jdbc:mysql://localhost:3306/csms"; // Database URL
+    private static final String dbURL = "jdbc:mysql://localhost:3306/database_name"; // Database URL
     private static final String dbUser = "root"; // Database username
-    private static final String dbPassword = "Kiran@{2924}"; // Database password
+    private static final String dbPassword = "password"; // Database password
 
     public static Connection getConnection() {
         Connection connection = null;
