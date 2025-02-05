@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DatabaseManager {
-    private static final String URL = "jdbc:mysql://localhost:3306/csms";
+    private static final String URL = "jdbc:mysql://localhost:3306/database_name";
     private static final String USER = "root";
-    private static final String PASSWORD = "Kiran@{2924}";
+    private static final String PASSWORD = "Password";
 
     // Method to get a database connection
     private Connection getConnection() throws SQLException {
