@@ -10,9 +10,9 @@ import java.sql.SQLException;
 public class ProfileDatabaseUtil {
     
     // Database connection parameters
-    private static final String URL = "jdbc:mysql://localhost:3306/csms"; // Your database URL
+    private static final String URL = "jdbc:mysql://localhost:3306/database_mame"; // Your database URL
     private static final String USER = "root"; // Your database username
-    private static final String PASSWORD = "Kiran@{2924}"; // Your database password
+    private static final String PASSWORD = "password"; // Your database password
 
     // Method to register personal details
     public static boolean registerPersonalDetails(String fullname, String username, String email, String password) {
