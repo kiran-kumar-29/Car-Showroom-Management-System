@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class CreateDatabase {
-
+    //MySql database
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/";
     private static final String USER = "root";
-    private static final String PASSWORD = "Kiran@{2924}";
+    private static final String PASSWORD = "password"; //change with your db password
     private static final String DATABASE_NAME = "carshowroom";
 
     public static void main(String[] args) {
